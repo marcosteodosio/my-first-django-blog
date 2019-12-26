@@ -14,7 +14,18 @@
         <p>On air since December's 26th, 2019, at 10:30 a.m.</p>
     </div>
     <br><br>
-    <div>
+
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h3><a href=''>{{post.title}}</a></h3>
+            <p>{{post.text|linebreaksbr}}</p>
+        </div>
+        
+    {% endfor %}
+
+    <!--
+        <div>
         <p>publicado: 26/12/2019, 10:31</p>
         <h3><a href=''>Primeira postagem</a></h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique, 
@@ -30,7 +41,7 @@
             nobis accusamus quas veniam. Beatae ratione assumenda nisi amet 
             velit? Magni?</p>
     </div>
-
+-->
 
 
 </body>
